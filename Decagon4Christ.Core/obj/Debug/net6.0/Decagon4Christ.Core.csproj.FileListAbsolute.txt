@@ -1,0 +1,17 @@
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\Decagon4Christ.Core.csproj.AssemblyReference.cache
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\Decagon4Christ.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\Decagon4Christ.Core.AssemblyInfoInputs.cache
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\Decagon4Christ.Core.AssemblyInfo.cs
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\Decagon4Christ.Core.csproj.CoreCompileInputs.cache
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\bin\Debug\net6.0\Decagon4Christ.Core.deps.json
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\bin\Debug\net6.0\Decagon4Christ.Core.dll
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\bin\Debug\net6.0\Decagon4Christ.Core.pdb
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\bin\Debug\net6.0\Decagon4Christ.Data.dll
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\bin\Debug\net6.0\Decagon4Christ.Model.dll
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\bin\Debug\net6.0\Decagon4Christ.Data.pdb
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\bin\Debug\net6.0\Decagon4Christ.Model.pdb
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\Decagon4Christ.Core.csproj.CopyComplete
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\Decagon4Christ.Core.dll
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\refint\Decagon4Christ.Core.dll
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\Decagon4Christ.Core.pdb
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Core\obj\Debug\net6.0\ref\Decagon4Christ.Core.dll
