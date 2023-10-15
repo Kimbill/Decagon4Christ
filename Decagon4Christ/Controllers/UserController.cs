@@ -5,6 +5,7 @@ using Decagon4Christ.Model;
 using Decagon4Christ.Model.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 namespace Decagon4Christ.Controllers
 {
     //[ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IConfiguration _configuration;
@@ -47,8 +48,15 @@ namespace Decagon4Christ.Controllers
                     UserName = model.Email,
                     Email = model.Email,
                     FirstName = model.FirstName,
-                    LastName = model.LastName
-                    // Set other properties as needed
+                    LastName = model.LastName,
+                    Comments = model.Comments,
+                    PasswordHash = model.Password,
+                    TechStack = model.TechStack,
+                    Squad = model.Squad,
+                    PlaceOfWork = model.PlaceOfWork,
+                    Role = model.Role,
+                    PhoneNumber = model.PhoneNumber,
+                    
                 };
 
                 var result = await _userManager.CreateAsync(user, model.Password);

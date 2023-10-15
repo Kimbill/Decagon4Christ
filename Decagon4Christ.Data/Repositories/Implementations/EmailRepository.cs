@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Decagon4Christ.Data.Repositories.Implementations
 {
-    internal class EmailRepository : IEmailRepository
+    public class EmailRepository : IEmailRepository
     {
         private readonly AppDbContext _dbContext;
 
@@ -26,9 +26,9 @@ namespace Decagon4Christ.Data.Repositories.Implementations
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<EmailTemplate>> GetEmails()
+        public async Task<List<User>> GetEmails()
         {
-            return await _dbContext.EmailTemplates.ToListAsync();
+            return await _dbContext.Users.ToListAsync();
         }
 
         public async Task SaveDataFromExcelToDatabase(string filePath)

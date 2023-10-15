@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Decagon4Christ.Controllers
 {
-    [ApiController]
-    [Route("api/emails")]
+    [Route("api/[controller]")]
+    //[ApiController]
     public class EmailController : ControllerBase
     {
         private readonly IEmailRepository _emailRepository;

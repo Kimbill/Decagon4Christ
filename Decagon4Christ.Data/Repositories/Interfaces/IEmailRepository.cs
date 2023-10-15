@@ -10,7 +10,7 @@ namespace Decagon4Christ.Data.Repositories.Interfaces
     public interface IEmailRepository
     {
         Task AddEmails(List<EmailTemplate> emails);
-        Task<List<EmailTemplate>> GetEmails();
+        Task<List<User>> GetEmails();
         Task SaveDataFromExcelToDatabase(string filePath);
     }
 }

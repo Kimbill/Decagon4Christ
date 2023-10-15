@@ -62,7 +62,6 @@ C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ\obj\Debug\net6.0\ref
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ\obj\Debug\net6.0\Decagon4Christ.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ\bin\Debug\net6.0\MailKit.dll
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ\bin\Debug\net6.0\MimeKit.dll

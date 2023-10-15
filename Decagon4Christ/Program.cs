@@ -1,4 +1,10 @@
+using Decagon4Christ.Common.Securities;
+using Decagon4Christ.Core.Services.Implementation;
+using Decagon4Christ.Core.Services.Interface;
 using Decagon4Christ.Data;
+using Decagon4Christ.Data.Repositories.Implementations;
+using Decagon4Christ.Data.Repositories.Interfaces;
+using Decagon4Christ.Extensions;
 using Decagon4Christ.Model;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -50,7 +56,14 @@ builder.Services.AddIdentity<User, IdentityRole>()
 
 builder.Services.Configure<IdentityOptions>(options => { });
 
+//builder.Services.AddTransient<EmailService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<Utilities>();
+builder.Services.AddScoped<IEmailRepository, EmailRepository>();
+builder.Services.AddAppSettingsConfig(builder.Configuration, builder.Environment);
 //builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+
 
 builder.Services.AddAuthentication(options =>
 {
