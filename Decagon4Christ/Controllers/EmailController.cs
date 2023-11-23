@@ -20,7 +20,7 @@ namespace Decagon4Christ.Controllers
             _logger = logger;
         }
 
-        [HttpPost("upload")]
+        [HttpPost("upload/{filePath}")]
         public async Task<IActionResult> UploadEmails(string filePath)
         {
             try
@@ -34,6 +34,7 @@ namespace Decagon4Christ.Controllers
                 return StatusCode(500, "An error occurred while uploading emails.");
             }
         }
+
 
         [HttpGet]
         public async Task<IActionResult> GetEmails()
@@ -64,5 +65,6 @@ namespace Decagon4Christ.Controllers
                 return StatusCode(500, "An error occurred while sending emails.");
             }
         }
+
     }
 }

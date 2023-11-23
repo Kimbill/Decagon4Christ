@@ -51,13 +51,16 @@ namespace Decagon4Christ.Model.Enums
         PasswordReset,
 
         [Description("Newsletter")]
-        Newsletter
+        Newsletter,
+        [Description("Newsletter")]
+        MonthlyMessages
     }
 
     public enum UserAction
     {
         Registration,
         PasswordReset,
-        Newsletter
+        Newsletter,
+        MonthlyMessages
     }
 }

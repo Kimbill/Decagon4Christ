@@ -41,37 +41,25 @@ namespace Decagon4Christ.Core.Services.Implementation
         {
             try
             {
-                var purpose = GetPurposeFromUserAction(userAction);
-                var template = await GetEmailTemplateByPurpose(purpose.ToString());
-                string registrationLink = GenerateRegistrationLink(userAction);
+                string templateContent = "";
+
+                templateContent = await ReadEmailTemplateFromFile("MonthlyMessages.html");
 
                 var request = new MailRequest
                 {
                     ToMail = userEmail!,
-                    Subject = template.Subject,
-                    Purpose = template.Purpose.ToString(),
+                    Subject = "Decagon4Christ",
+                    Purpose = ((int)userAction).ToString(),
+                    Body = string.IsNullOrEmpty(templateContent) ? "" : templateContent
                 };
-                if (userAction == UserAction.Registration || userAction == UserAction.PasswordReset)
-                {
-                    string emailBody = template.Body.Replace(template.Body, registrationLink);
-
-                    request.Body = GenerateEmailBody(emailBody, userAction);
-                }
-                else
-                {
-                    request.Body = template.Body;
-                }
 
                 using var email = new MailMessage(_fromMail, userEmail);
-                //email.Sender = MailboxAddress.Parse(_fromMail);
-                //email.To.Add(MailboxAddress.Parse(request.ToMail));
                 email.Subject = request.Subject;
                 email.Body = request.Body;
                 email.IsBodyHtml = true;
 
                 var builder = new BodyBuilder();
                 builder.HtmlBody = request.Body;
-                //email.Body = builder.ToMessageBody();
 
                 using var smtp = new SmtpClient(_host, _port);
                 smtp.EnableSsl = true;
@@ -79,7 +67,6 @@ namespace Decagon4Christ.Core.Services.Implementation
                 smtp.Credentials = new NetworkCredential(_fromMail, _password);
 
                 await smtp.SendMailAsync(email);
-                //await smtp.DisconnectAsync(true);
 
                 _logger.LogInformation($"Email sent to {request.ToMail} with purpose {request.Purpose}");
             }
@@ -90,19 +77,28 @@ namespace Decagon4Christ.Core.Services.Implementation
             }
         }
 
-        private async Task<EmailTemplate> GetEmailTemplateByPurpose(string purpose)
+        private async Task<string> ReadEmailTemplateFromFile(string templateFileName)
         {
-            var template = await _dbContext.EmailTemplates
-                        .ToListAsync();
+            try
+            {
+                var templatePath = Path.Combine("StaticFiles", templateFileName);
 
-            var filteredTemplate = template.FirstOrDefault(t => t.Purpose.ToString() == purpose.ToString());
-            return filteredTemplate!;
-        }
+                if (!File.Exists(templatePath))
+                {
+                    _logger.LogError($"Email template file not found: {templateFileName}");
+                    return string.Empty;
+                }
 
-        public async Task AddEmailTemplate(EmailTemplate template)
-        {
-            _dbContext.EmailTemplates.Add(template);
-            await _dbContext.SaveChangesAsync();
+                var templateContent = await File.ReadAllTextAsync(templatePath, Encoding.UTF8);
+
+
+                return templateContent;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error reading email template file: {templateFileName}");
+                return string.Empty;
+            }
         }
 
         private EmailPurpose GetPurposeFromUserAction(UserAction userAction)

@@ -14,7 +14,7 @@ namespace Decagon4Christ.Data.Repositories.Implementations
     public class EmailRepository : IEmailRepository
     {
         private readonly AppDbContext _dbContext;
-
+           
         public EmailRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -37,7 +37,7 @@ namespace Decagon4Christ.Data.Repositories.Implementations
 
             using ExcelPackage package = new ExcelPackage(fileInfo);
 
-            ExcelWorksheet worksheet = package.Workbook.Worksheets.FirstOrDefault();
+            using var worksheet = package.Workbook.Worksheets.FirstOrDefault();
 
             if (worksheet != null)
             {

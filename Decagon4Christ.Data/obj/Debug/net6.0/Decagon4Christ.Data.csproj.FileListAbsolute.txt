@@ -1,4 +1,5 @@
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\bin\Debug\net6.0\Decagon4Christ.Data.deps.json
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\bin\Debug\net6.0\Decagon4Christ.Data.runtimeconfig.json
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\bin\Debug\net6.0\Decagon4Christ.Data.dll
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\bin\Debug\net6.0\Decagon4Christ.Data.pdb
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\bin\Debug\net6.0\Decagon4Christ.Model.dll
@@ -12,6 +13,5 @@ C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\obj\Debug\net6.
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\obj\Debug\net6.0\Decagon4Christ.Data.dll
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\obj\Debug\net6.0\refint\Decagon4Christ.Data.dll
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\obj\Debug\net6.0\Decagon4Christ.Data.pdb
-C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\obj\Debug\net6.0\ref\Decagon4Christ.Data.dll
-C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\bin\Debug\net6.0\Decagon4Christ.Data.runtimeconfig.json
 C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\obj\Debug\net6.0\Decagon4Christ.Data.genruntimeconfig.cache
+C:\Users\Decagon\source\repos\Decagon4Christ\Decagon4Christ.Data\obj\Debug\net6.0\ref\Decagon4Christ.Data.dll
